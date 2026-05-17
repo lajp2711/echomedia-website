@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620" role="img" aria-label="Vanessa business portrait artwork">
+  <defs>
+    <linearGradient id="hair" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff7ad"/><stop offset="1" stop-color="#f2c866"/></linearGradient>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#020617"/></linearGradient>
+    <linearGradient id="glow" x1="0" x2="1"><stop stop-color="#a855f7"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  </defs>
+  <rect width="520" height="620" rx="34" fill="url(#bg)"/>
+  <circle cx="260" cy="190" r="170" fill="#1e293b" opacity=".55"/>
+  <path d="M72 560c22-144 96-230 188-230s166 86 188 230" fill="#020617"/>
+  <path d="M168 358l92 170 92-170c-22-18-51-28-92-28s-70 10-92 28Z" fill="#0f172a"/>
+  <path d="M155 392c30-36 64-54 105-54s75 18 105 54l-28 154H183L155 392Z" fill="#050816"/>
+  <path d="M207 346l53 74 53-74v-78H207v78Z" fill="#f0b7a4"/>
+  <ellipse cx="260" cy="225" rx="92" ry="116" fill="#f8c7b8"/>
+  <path d="M150 230c0-122 72-182 135-172 86 14 108 85 94 174-21-66-73-87-135-93-38 33-67 62-94 91Z" fill="url(#hair)"/>
+  <path d="M142 245c-22 110-8 232 36 315h44c-42-110-34-219 8-330l-20-102c-36 20-58 61-68 117Z" fill="url(#hair)"/>
+  <path d="M375 238c31 112 24 232-28 322h-48c51-116 43-228-6-334l24-98c32 18 50 54 58 110Z" fill="url(#hair)"/>
+  <path d="M209 218c19-14 39-14 58 0" fill="none" stroke="#7c2d12" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+  <path d="M286 218c16-11 34-11 52 0" fill="none" stroke="#7c2d12" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+  <circle cx="229" cy="242" r="8" fill="#0f172a"/><circle cx="310" cy="242" r="8" fill="#0f172a"/>
+  <path d="M255 245c-6 22-10 34-16 43 10 6 22 7 34 2" fill="none" stroke="#c08472" stroke-width="5" stroke-linecap="round"/>
+  <path d="M226 316c23 19 58 19 81 0" fill="none" stroke="#be123c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M175 410l78 72-34 35-82-100c12-10 24-15 38-7Z" fill="#111827"/>
+  <path d="M345 410l-78 72 34 35 82-100c-12-10-24-15-38-7Z" fill="#111827"/>
+  <path d="M111 574h298" stroke="url(#glow)" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+</svg>

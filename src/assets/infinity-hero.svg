@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="Neon infinity growth system artwork">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#1e3a8a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#a855f7"/>
+      <stop offset=".48" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="420" fill="url(#bg)"/>
+  <g opacity=".35">
+    <path d="M470 207 L890 30" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="7 11"/>
+    <path d="M470 215 L890 130" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="7 11"/>
+    <path d="M470 225 L890 300" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="7 11"/>
+    <path d="M470 235 L865 398" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="7 11"/>
+  </g>
+  <path d="M450 210 C345 55 120 55 120 210 C120 365 345 365 450 210 C555 55 780 55 780 210 C780 365 555 365 450 210Z" fill="none" stroke="url(#line)" stroke-width="42" stroke-linecap="round" opacity=".28" filter="url(#glow)"/>
+  <path d="M450 210 C345 55 120 55 120 210 C120 365 345 365 450 210 C555 55 780 55 780 210 C780 365 555 365 450 210Z" fill="none" stroke="url(#line)" stroke-width="25" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M450 210 C345 55 120 55 120 210 C120 365 345 365 450 210 C555 55 780 55 780 210 C780 365 555 365 450 210Z" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" opacity=".32"/>
+</svg>
