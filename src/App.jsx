@@ -3,7 +3,6 @@ import {
   Bot,
   Building2,
   ChartCandlestick,
-  Home,
   Rocket,
   House,
   TrendingUp,
@@ -13,8 +12,6 @@ import {
   Heart,
   ArrowRight,
   CheckCircle2,
-  Instagram,
-  Youtube,
   Mail,
 } from "lucide-react";
 import logo from "./assets/echomedia-logo.svg";
@@ -58,12 +55,30 @@ const roadmap = [
   [Gem, "Step 4", "Legacy & Impact", "Build EchoAlpha, create lasting impact, and leave a legacy."],
 ];
 
-function Button({ children, variant = "primary" }) {
+const navItems = [
+  ["Home", "#home"],
+  ["Services", "#services"],
+  ["Roadmap", "#roadmap"],
+  ["About", "#about"],
+  ["Contact", "#contact"],
+];
+
+function Button({ children, href, variant = "primary" }) {
   const classes =
     variant === "primary"
       ? "bg-gradient-to-r from-violet-500 to-sky-500 text-white shadow-glow"
       : "border border-violet-400/70 bg-black/20 text-white hover:bg-white/10";
-  return <button className={`rounded-lg px-7 py-4 text-sm font-bold transition hover:-translate-y-0.5 ${classes}`}>{children}</button>;
+  const className = `inline-flex items-center justify-center rounded-lg px-7 py-4 text-sm font-bold transition hover:-translate-y-0.5 ${classes}`;
+
+  if (href) {
+    return (
+      <a className={className} href={href}>
+        {children}
+      </a>
+    );
+  }
+
+  return <button className={className}>{children}</button>;
 }
 
 function App() {
@@ -75,12 +90,14 @@ function App() {
             <img src={logo} alt="EchoMedia.ai logo" className="h-10 w-10" />
             <span className="text-2xl font-black tracking-tight">EchoMedia.ai</span>
           </a>
-          <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
-            {['Home', 'Services', 'Divisions', 'Roadmap', 'About', 'Contact'].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="text-slate-200 hover:text-violet-300">{item}</a>
+          <nav aria-label="Primary navigation" className="hidden items-center gap-8 text-sm font-medium md:flex">
+            {navItems.map(([label, href]) => (
+              <a key={label} href={href} className="text-slate-200 hover:text-violet-300">
+                {label}
+              </a>
             ))}
           </nav>
-          <Button>Book a Call</Button>
+          <Button href="#contact">Book a Call</Button>
         </div>
       </header>
 
@@ -95,8 +112,8 @@ function App() {
               EchoMedia.ai builds smart AI automations that save time, scale businesses, and create real freedom. Three divisions. One mission: Own the future.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button>Explore Our Services</Button>
-              <Button variant="outline">Book a Strategy Call</Button>
+              <Button href="#services">Explore Our Services</Button>
+              <Button href="#contact" variant="outline">Book a Strategy Call</Button>
             </div>
           </motion.div>
 
@@ -121,7 +138,7 @@ function App() {
         </div>
       </section>
 
-      <section id="divisions" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="services" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-20">
         <p className="text-center text-sm font-bold uppercase tracking-[0.25em] text-violet-300">Our Ecosystem</p>
         <h2 className="mt-3 text-center text-4xl font-black">Three Divisions. Infinite Potential.</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -155,7 +172,7 @@ function App() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-violet-300">Our Roadmap</p>
             <h2 className="mt-3 text-4xl font-black">The Journey Ahead</h2>
             <p className="mt-5 leading-7 text-slate-300">We’re building step by step. Each phase unlocks more freedom, more impact, and more legacy.</p>
-            <div className="mt-8"><Button variant="outline">See Full Roadmap</Button></div>
+            <div className="mt-8"><Button href="#contact" variant="outline">Talk Through the Roadmap</Button></div>
           </div>
           <div className="grid gap-6 md:grid-cols-4">
             {roadmap.map(([Icon, step, title, copy]) => (
@@ -199,7 +216,7 @@ function App() {
       <section id="contact" className="bg-gradient-to-r from-violet-600 to-sky-500">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center">
           <div><h2 className="text-4xl font-black">Ready to Build Your Freedom?</h2><p className="mt-2 text-lg">Let’s connect and build something extraordinary together.</p></div>
-          <div className="text-center"><Button variant="outline">Book a Call <ArrowRight className="ml-2 inline h-4 w-4" /></Button><p className="mt-3 text-sm">Let’s build your future.</p></div>
+          <div className="text-center"><Button href="mailto:hello@echomedia.ai" variant="outline">Book a Call <ArrowRight className="ml-2 h-4 w-4" /></Button><p className="mt-3 text-sm">Let’s build your future.</p></div>
         </div>
       </section>
 
@@ -207,7 +224,10 @@ function App() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-6 md:flex-row">
           <div className="flex items-center gap-3"><img src={logo} alt="EchoMedia.ai" className="h-8 w-8" /><span className="font-black">EchoMedia.ai</span></div>
           <p className="text-sm text-slate-400">© 2026 EchoMedia.ai. All rights reserved.</p>
-          <div className="flex gap-5 text-slate-400"><Instagram className="h-5 w-5" /><Youtube className="h-5 w-5" /><Mail className="h-5 w-5" /></div>
+          <div className="flex gap-5 text-slate-400">
+            <a href="https://echomedia.ai" aria-label="EchoMedia.ai website" className="hover:text-violet-300"><Globe2 className="h-5 w-5" /></a>
+            <a href="mailto:hello@echomedia.ai" aria-label="Email EchoMedia.ai" className="hover:text-violet-300"><Mail className="h-5 w-5" /></a>
+          </div>
         </div>
       </footer>
     </main>
