@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import logo from "./assets/echomedia-logo.svg";
 import infinityHero from "./assets/infinity-hero.svg";
-import vanessaBusiness from "./assets/vanessa-business.svg";
+import vanessaCooProfile from "./assets/vanessa-coo-profile.svg";
 
 const divisions = [
   {
@@ -190,17 +190,22 @@ function App() {
       </section>
 
       <section id="about" className="border-y border-white/10 bg-slate-900/45">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-10 md:grid-cols-[300px_1fr_300px]">
-          <img src={vanessaBusiness} alt="Vanessa in business attire" className="rounded-2xl border border-white/10 shadow-2xl" />
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-10 md:grid-cols-[420px_1fr_300px]">
+          <img
+            src={vanessaCooProfile}
+            alt="Vanessa, Chief Operating Officer of EchoMedia.ai"
+            loading="lazy"
+            className="w-full rounded-2xl border border-white/10 object-cover shadow-2xl shadow-violet-950/30 transition duration-500 hover:scale-[1.01]"
+          />
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-violet-300">Founder’s Vision</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-violet-300">COO’s Vision</p>
             <h2 className="mt-3 text-4xl font-black">Built on Freedom. Driven by Purpose.</h2>
             <p className="mt-5 leading-8 text-slate-300">
               I’m building EchoMedia.ai to create the life I’ve always dreamed of: freedom of time, freedom of location, and the ability to help others do the same.
             </p>
             <p className="mt-4 leading-8 text-slate-300">This is more than a business. It’s a movement. Let’s build the future together.</p>
             <p className="mt-6 font-signature text-4xl text-violet-300">Vanessa</p>
-            <p className="text-slate-300">Founder, EchoMedia.ai</p>
+            <p className="text-slate-300">Chief Operating Officer, EchoMedia.ai</p>
           </div>
           <div className="space-y-7 border-l border-white/10 pl-8">
             {[ [Clock, 'Time Freedom', 'Design your days. Live on your terms.'], [Globe2, 'Location Freedom', 'Work from anywhere. Live anywhere.'], [Heart, 'Financial Freedom', 'Build once. Earn forever. Help others do the same.'] ].map(([Icon, title, copy]) => (
