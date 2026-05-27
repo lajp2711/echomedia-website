@@ -21,6 +21,7 @@ import ElevenLabsAudioPage from "./pages/ElevenLabsAudioPage.jsx";
 import AiAudioLaunchKitPage from "./pages/AiAudioLaunchKitPage.jsx";
 import AudiobookAiPage from "./pages/AudiobookAiPage.jsx";
 import LanternAudioPage from "./pages/LanternAudioPage.jsx";
+import CreatorVoiceAiPage from "./pages/CreatorVoiceAiPage.jsx";
 
 const divisions = [
   {
@@ -101,6 +102,10 @@ function App() {
 
   if (window.location.pathname === "/lantern-audio") {
     return <LanternAudioPage />;
+  }
+
+  if (window.location.pathname === "/creator-voice-ai") {
+    return <CreatorVoiceAiPage />;
   }
 
   return (
@@ -207,6 +212,44 @@ function App() {
                 <li>Voice rights clearance for third parties</li>
                 <li>Final legal or publishing advice</li>
                 <li>Unlimited narration regeneration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-slate-950/60">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-14 md:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-300">Creator Service Package</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Creator Voice System</h2>
+            <p className="mt-4 leading-8 text-slate-300">
+              A consent-first setup for creators who want reusable voice scripts, AI voice workflow documentation, review rules, publishing cadence, and ElevenLabs setup guidance.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Button href="mailto:hello@echomedia.ai?subject=Creator%20Voice%20System%20Inquiry">Request Creator Voice System</Button>
+              <Button href="/creator-voice-ai" variant="outline">View Creator Workflow</Button>
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+              <h3 className="font-black text-sky-300">Includes</h3>
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>Voice use-case map</li>
+                <li>Consent checklist</li>
+                <li>Reusable script templates</li>
+                <li>QA and approval workflow</li>
+                <li>Content calendar starter</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+              <h3 className="font-black text-violet-300">Excludes</h3>
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>Generating voices without consent</li>
+                <li>Impersonation or deceptive publishing</li>
+                <li>Platform approval guarantees</li>
+                <li>Legal contract drafting</li>
+                <li>Unlimited content production</li>
               </ul>
             </div>
           </div>
