@@ -22,6 +22,7 @@ import AiAudioLaunchKitPage from "./pages/AiAudioLaunchKitPage.jsx";
 import AudiobookAiPage from "./pages/AudiobookAiPage.jsx";
 import LanternAudioPage from "./pages/LanternAudioPage.jsx";
 import CreatorVoiceAiPage from "./pages/CreatorVoiceAiPage.jsx";
+import PartnershipsPage from "./pages/PartnershipsPage.jsx";
 
 const divisions = [
   {
@@ -63,6 +64,7 @@ const roadmap = [
 const navItems = [
   ["Home", "#home"],
   ["Services", "#services"],
+  ["Partners", "/partnerships"],
   ["AI Audio", "/elevenlabs-ai-audio"],
   ["Roadmap", "#roadmap"],
   ["About", "#about"],
@@ -88,6 +90,10 @@ function Button({ children, href, variant = "primary" }) {
 }
 
 function App() {
+  if (window.location.pathname === "/partnerships") {
+    return <PartnershipsPage />;
+  }
+
   if (window.location.pathname === "/elevenlabs-ai-audio") {
     return <ElevenLabsAudioPage />;
   }
@@ -139,7 +145,7 @@ function App() {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button href="#services">Explore Our Services</Button>
-              <Button href="#contact" variant="outline">Book a Strategy Call</Button>
+              <Button href="/partnerships" variant="outline">View Partnership Areas</Button>
             </div>
           </motion.div>
 
@@ -167,15 +173,15 @@ function App() {
       <section className="border-b border-white/10 bg-slate-950/70">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-12 md:grid-cols-[1fr_auto]">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-300">New AI Audio Services</p>
-            <h2 className="mt-3 text-3xl font-black md:text-4xl">Audiobooks, voiceovers, and voice agents now have a front door.</h2>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-300">New Partnership Surface</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Audio, voice, language, and launch systems now have a command deck.</h2>
             <p className="mt-4 max-w-3xl leading-8 text-slate-300">
-              Explore the EchoMedia.ai ElevenLabs hub for author narration, creator voice workflows, business voice agents, Lantern Protocol audio, and the coming EchoChamber language layer.
+              Explore the new partnership hub for ElevenLabs, author narration, creator voice workflows, business voice agents, Lantern Protocol audio, and EchoChamber language services.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
-            <Button href="/elevenlabs-ai-audio">Explore AI Audio</Button>
-            <Button href="/ai-audio-launch-kit" variant="outline">Get Launch Kit</Button>
+            <Button href="/partnerships">Open Partnership Hub</Button>
+            <Button href="/elevenlabs-ai-audio" variant="outline">Explore AI Audio</Button>
           </div>
         </div>
       </section>
