@@ -18,6 +18,7 @@ import logo from "./assets/echomedia-logo.svg";
 import infinityHero from "./assets/infinity-hero.svg";
 import vanessaCooProfile from "./assets/vanessa-coo-profile.svg";
 import ElevenLabsAudioPage from "./pages/ElevenLabsAudioPage.jsx";
+import AiAudioLaunchKitPage from "./pages/AiAudioLaunchKitPage.jsx";
 
 const divisions = [
   {
@@ -88,6 +89,10 @@ function App() {
     return <ElevenLabsAudioPage />;
   }
 
+  if (window.location.pathname === "/ai-audio-launch-kit") {
+    return <AiAudioLaunchKitPage />;
+  }
+
   return (
     <main className="min-h-screen bg-[#030712] text-white">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl">
@@ -155,7 +160,7 @@ function App() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
             <Button href="/elevenlabs-ai-audio">Explore AI Audio</Button>
-            <Button href="mailto:hello@echomedia.ai?subject=AI%20Audio%20Workflow%20Consult" variant="outline">Book Audio Consult</Button>
+            <Button href="/ai-audio-launch-kit" variant="outline">Get Launch Kit</Button>
           </div>
         </div>
       </section>
