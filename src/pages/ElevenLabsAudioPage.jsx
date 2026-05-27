@@ -144,7 +144,7 @@ function ElevenLabsAudioPage() {
           Downloadable lead magnet flow coming next. The kit will help visitors choose a use case, prepare content, select a voice workflow, review audio, and publish with tracking.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <Button href="mailto:hello@echomedia.ai?subject=AI%20Audio%20Launch%20Kit">Request the Launch Kit</Button>
+          <Button href="/ai-audio-launch-kit">Request the Launch Kit</Button>
           <Button href="mailto:hello@echomedia.ai?subject=AI%20Audio%20Workflow%20Consult" variant="outline">Book a Workflow Consult</Button>
         </div>
       </section>
