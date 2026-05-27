@@ -19,6 +19,7 @@ import infinityHero from "./assets/infinity-hero.svg";
 import vanessaCooProfile from "./assets/vanessa-coo-profile.svg";
 import ElevenLabsAudioPage from "./pages/ElevenLabsAudioPage.jsx";
 import AiAudioLaunchKitPage from "./pages/AiAudioLaunchKitPage.jsx";
+import AudiobookAiPage from "./pages/AudiobookAiPage.jsx";
 
 const divisions = [
   {
@@ -91,6 +92,10 @@ function App() {
 
   if (window.location.pathname === "/ai-audio-launch-kit") {
     return <AiAudioLaunchKitPage />;
+  }
+
+  if (window.location.pathname === "/audiobook-ai") {
+    return <AudiobookAiPage />;
   }
 
   return (
