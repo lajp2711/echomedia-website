@@ -144,6 +144,22 @@ function App() {
         </div>
       </section>
 
+      <section className="border-b border-white/10 bg-slate-950/70">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-12 md:grid-cols-[1fr_auto]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-300">New AI Audio Services</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Audiobooks, voiceovers, and voice agents now have a front door.</h2>
+            <p className="mt-4 max-w-3xl leading-8 text-slate-300">
+              Explore the EchoMedia.ai ElevenLabs hub for author narration, creator voice workflows, business voice agents, Lantern Protocol audio, and the coming EchoChamber language layer.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
+            <Button href="/elevenlabs-ai-audio">Explore AI Audio</Button>
+            <Button href="mailto:hello@echomedia.ai?subject=AI%20Audio%20Workflow%20Consult" variant="outline">Book Audio Consult</Button>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-20">
         <p className="text-center text-sm font-bold uppercase tracking-[0.25em] text-violet-300">Our Ecosystem</p>
         <h2 className="mt-3 text-center text-4xl font-black">Three Divisions. Infinite Potential.</h2>
