@@ -17,6 +17,7 @@ import {
 import logo from "./assets/echomedia-logo.svg";
 import infinityHero from "./assets/infinity-hero.svg";
 import vanessaCooProfile from "./assets/vanessa-coo-profile.svg";
+import ElevenLabsAudioPage from "./pages/ElevenLabsAudioPage.jsx";
 
 const divisions = [
   {
@@ -58,6 +59,7 @@ const roadmap = [
 const navItems = [
   ["Home", "#home"],
   ["Services", "#services"],
+  ["AI Audio", "/elevenlabs-ai-audio"],
   ["Roadmap", "#roadmap"],
   ["About", "#about"],
   ["Contact", "#contact"],
@@ -82,6 +84,10 @@ function Button({ children, href, variant = "primary" }) {
 }
 
 function App() {
+  if (window.location.pathname === "/elevenlabs-ai-audio") {
+    return <ElevenLabsAudioPage />;
+  }
+
   return (
     <main className="min-h-screen bg-[#030712] text-white">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl">
