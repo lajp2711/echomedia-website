@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Bot, CheckCircle2, FileAudio2, Headphones, Mic2, RadioTower, ShieldCheck, Sparkles, Wand2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, FileAudio2, Headphones, Mic2, RadioTower, ShieldCheck, Sparkles, Wand2 } from "lucide-react";
 import logo from "../assets/echomedia-logo.svg";
+import AffiliateDisclosure from "../components/AffiliateDisclosure.jsx";
 
 const useCases = [
   {
@@ -46,19 +47,6 @@ function Button({ children, href, variant = "primary" }) {
     <a className={`inline-flex items-center justify-center rounded-lg px-7 py-4 text-sm font-bold transition hover:-translate-y-0.5 ${classes}`} href={href}>
       {children}
     </a>
-  );
-}
-
-function AffiliateDisclosure() {
-  return (
-    <section className="mx-auto max-w-5xl px-6 pb-16">
-      <div className="rounded-2xl border border-sky-400/30 bg-sky-500/10 p-6 text-sm leading-7 text-slate-200">
-        <p className="font-bold text-sky-200">Affiliate disclosure</p>
-        <p className="mt-2">
-          Some links on this page are affiliate links. If you sign up through them, EchoMedia.ai may earn a commission at no extra cost to you. We only recommend tools that fit our actual workflows for AI audio, narration, voice agents, content production, and publishing.
-        </p>
-      </div>
-    </section>
   );
 }
 
@@ -175,7 +163,7 @@ function ElevenLabsAudioPage() {
         </div>
       </section>
 
-      <AffiliateDisclosure />
+      <AffiliateDisclosure className="pb-16" />
 
       <footer className="border-t border-white/10 bg-[#020617]">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-6 md:flex-row">
