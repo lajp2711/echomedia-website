@@ -20,6 +20,7 @@ import vanessaCooProfile from "./assets/vanessa-coo-profile.svg";
 import ElevenLabsAudioPage from "./pages/ElevenLabsAudioPage.jsx";
 import AiAudioLaunchKitPage from "./pages/AiAudioLaunchKitPage.jsx";
 import AudiobookAiPage from "./pages/AudiobookAiPage.jsx";
+import LanternAudioPage from "./pages/LanternAudioPage.jsx";
 
 const divisions = [
   {
@@ -98,6 +99,10 @@ function App() {
     return <AudiobookAiPage />;
   }
 
+  if (window.location.pathname === "/lantern-audio") {
+    return <LanternAudioPage />;
+  }
+
   return (
     <main className="min-h-screen bg-[#030712] text-white">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl">
@@ -166,6 +171,44 @@ function App() {
           <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
             <Button href="/elevenlabs-ai-audio">Explore AI Audio</Button>
             <Button href="/ai-audio-launch-kit" variant="outline">Get Launch Kit</Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-slate-900/35">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-14 md:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-violet-300">Author Service Package</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Author Audio Prep</h2>
+            <p className="mt-4 leading-8 text-slate-300">
+              A consult-led package for authors who need a manuscript cleaned, structured, and tested before AI narration or professional audiobook production. Starting price is handled by consult so scope can match book length, chapter count, and publishing goals.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Button href="mailto:hello@echomedia.ai?subject=Author%20Audio%20Prep%20Inquiry">Request Author Audio Prep</Button>
+              <Button href="/audiobook-ai" variant="outline">View Author Workflow</Button>
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+              <h3 className="font-black text-sky-300">Includes</h3>
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>Manuscript structure review</li>
+                <li>Narration formatting pass</li>
+                <li>Pronunciation and audio notes</li>
+                <li>Test chapter QA guidance</li>
+                <li>Publishing prep checklist</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+              <h3 className="font-black text-violet-300">Excludes</h3>
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>Ghostwriting full chapters</li>
+                <li>Guaranteeing marketplace approval</li>
+                <li>Voice rights clearance for third parties</li>
+                <li>Final legal or publishing advice</li>
+                <li>Unlimited narration regeneration</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
