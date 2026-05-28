@@ -3,6 +3,7 @@ import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import OpsHelmInteractiveDemo from "./components/OpsHelmInteractiveDemo";
 import OpsHelmProof from "./components/OpsHelmProof";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
@@ -15,6 +16,7 @@ export default function App() {
       <main>
         <Hero />
         <OpsHelmProof />
+        <OpsHelmInteractiveDemo />
         <Services />
         <Ecosystem />
         <Roadmap />
