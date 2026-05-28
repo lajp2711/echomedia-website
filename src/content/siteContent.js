@@ -34,6 +34,51 @@ export const sampleFindings = [
   "No private customer data is shown here; this is a sanitized website demonstration artifact.",
 ];
 
+export const opsHelmDemoScenarios = [
+  {
+    title: "SharePoint access incident",
+    label: "Ticket + HAR + tenant notes",
+    input: "User reports intermittent access failures after a permission change. HAR shows repeated 302 redirects and delayed token refresh. Support notes mention recent group membership updates.",
+    findings: [
+      "Symptoms point to session/token drift rather than a broad SharePoint outage.",
+      "Recent membership change is relevant, but evidence does not prove directory replication failure.",
+      "Recommended next check: compare impacted user claims before and after fresh sign-in.",
+    ],
+    output: "We found evidence of an authentication/session consistency issue affecting a subset of users. Please have the impacted user complete a fresh sign-in while we validate claims and group membership timing.",
+    escalation: "Support engineer → M365 identity owner → SharePoint platform owner if claims remain inconsistent.",
+    roi: "6-9 hours saved",
+    value: "$750-$1,125 estimated review value",
+  },
+  {
+    title: "Web app latency review",
+    label: "Logs + customer narrative",
+    input: "Customer says the portal is slow only during checkout. App logs show API latency spikes, retry storms, and three payment callback delays during the same window.",
+    findings: [
+      "Performance issue is isolated to checkout workflow, not the full application.",
+      "Retry behavior may be amplifying payment callback delay.",
+      "Recommended next check: inspect payment provider callback timing and retry thresholds.",
+    ],
+    output: "The slowdown appears concentrated in checkout and aligns with delayed payment callbacks plus retry amplification. We recommend reviewing retry thresholds and callback telemetry before changing front-end code.",
+    escalation: "App support → payment integration owner → platform reliability review.",
+    roi: "4-7 hours saved",
+    value: "$500-$875 estimated triage value",
+  },
+  {
+    title: "Executive incident brief",
+    label: "Ticket bundle + engineer notes",
+    input: "Multiple tickets describe the same outage using different language. Engineer notes include suspected root cause, workaround, open risk, and customer impact statements.",
+    findings: [
+      "Tickets can be grouped into one incident narrative with three affected customer segments.",
+      "Workaround is ready, but root cause is still unconfirmed.",
+      "Executive update should separate verified impact from suspected cause.",
+    ],
+    output: "We have grouped related reports into one incident brief. Current evidence confirms customer impact and a working mitigation, while root cause remains under review.",
+    escalation: "Incident commander → executive stakeholder update → post-incident evidence review.",
+    roi: "8-12 hours saved",
+    value: "$1,000-$1,500 estimated communications value",
+  },
+];
+
 export const divisions = [
   {
     icon: Bot,
