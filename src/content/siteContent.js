@@ -79,6 +79,18 @@ export const opsHelmDemoScenarios = [
   },
 ];
 
+export const opsHelmRequestOptions = [
+  "Ticket and log review",
+  "HAR or browser trace analysis",
+  "Customer-ready status updates",
+  "Executive incident summaries",
+  "ROI and labor-savings reporting",
+];
+
+export const opsHelmTeamSizes = ["Solo / founder", "Small support team", "Mid-market team", "Enterprise support org"];
+
+export const opsHelmTimelineOptions = ["This week", "This month", "This quarter", "Exploring for later"];
+
 export const divisions = [
   {
     icon: Bot,
