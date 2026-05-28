@@ -9,6 +9,10 @@ import {
   Clock,
   Globe2,
   Heart,
+  ShieldCheck,
+  RadioTower,
+  Workflow,
+  Sparkles,
 } from "lucide-react";
 
 export const proofPoints = [
@@ -60,6 +64,33 @@ export const divisions = [
   },
 ];
 
+export const ecosystemNodes = [
+  {
+    icon: ShieldCheck,
+    title: "Lantern Protocol",
+    subtitle: "Parent trust layer",
+    copy: "The governance and trust architecture behind the ecosystem, designed to keep recommendations, evidence, and product decisions aligned.",
+  },
+  {
+    icon: Sparkles,
+    title: "EchoMedia.ai",
+    subtitle: "Public automation venture",
+    copy: "The customer-facing AI automation brand for support, content, lead generation, hospitality operations, and practical business systems.",
+  },
+  {
+    icon: Workflow,
+    title: "OpsHelm",
+    subtitle: "Operational proof engine",
+    copy: "The flagship ticket and log intelligence product that turns messy service work into findings, updates, escalation paths, and ROI estimates.",
+  },
+  {
+    icon: RadioTower,
+    title: "SignalForge",
+    subtitle: "Reusable platform layer",
+    copy: "A future routing and deployment wrapper for reusable configuration, product packaging, and cross-venture signal flow.",
+  },
+];
+
 export const roadmap = [
   [Rocket, "Step 1", "Build & Automate", "Build the agency systems, prove ROI, and turn repeatable work into scalable products."],
   [House, "Step 2", "Buy & Scale", "Acquire and operate hospitality assets with automation-backed guest experiences."],
@@ -77,6 +108,7 @@ export const navItems = [
   ["Home", "#home"],
   ["Proof", "#proof"],
   ["Services", "#services"],
+  ["Ecosystem", "#ecosystem"],
   ["Roadmap", "#roadmap"],
   ["About", "#about"],
   ["Contact", "#contact"],
