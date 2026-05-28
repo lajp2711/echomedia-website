@@ -18,6 +18,12 @@ import logo from "./assets/echomedia-logo.svg";
 import infinityHero from "./assets/infinity-hero.svg";
 import vanessaCooProfile from "./assets/vanessa-coo-profile.svg";
 
+const proofPoints = [
+  ["Ticket + log analysis", "Turn messy service tickets, HAR files, and logs into executive-ready findings."],
+  ["Customer-ready drafts", "Generate clear customer updates, internal notes, and escalation paths from the same evidence."],
+  ["ROI visibility", "Translate AI analysis into estimated hours saved and business value for each engagement."],
+];
+
 const divisions = [
   {
     icon: Bot,
@@ -25,7 +31,7 @@ const divisions = [
     subtitle: "AI Automation Agency",
     accent: "text-purple-300",
     items: ["AI Workflows & Integrations", "Content & Social Automation", "Lead Gen & CRM Systems", "Custom AI Solutions"],
-    copy: "We build custom AI systems that automate content, outreach, lead generation, customer support, and more.",
+    copy: "We build custom AI systems that automate support, content, outreach, lead generation, customer communications, and operational reporting.",
     cta: "Learn More",
   },
   {
@@ -34,7 +40,7 @@ const divisions = [
     subtitle: "Airbnb & Hospitality",
     accent: "text-pink-300",
     items: ["Property Acquisition", "Interior Design & Setup", "Guest Experience Automation", "High-Performing Listings"],
-    copy: "Short-term rental properties designed for exceptional guest experiences and passive income growth.",
+    copy: "Short-term rental properties designed for exceptional guest experiences, repeatable operations, and passive income growth.",
     cta: "View Properties",
   },
   {
@@ -49,14 +55,15 @@ const divisions = [
 ];
 
 const roadmap = [
-  [Rocket, "Step 1", "Build & Automate", "Build our agency systems, automate everything, deliver results."],
-  [House, "Step 2", "Buy & Scale", "Acquire Airbnb properties, build passive income machines."],
-  [TrendingUp, "Step 3", "Invest & Grow", "Invest in assets, scale operations, and create financial freedom."],
-  [Gem, "Step 4", "Legacy & Impact", "Build EchoAlpha, create lasting impact, and leave a legacy."],
+  [Rocket, "Step 1", "Build & Automate", "Build the agency systems, prove ROI, and turn repeatable work into scalable products."],
+  [House, "Step 2", "Buy & Scale", "Acquire and operate hospitality assets with automation-backed guest experiences."],
+  [TrendingUp, "Step 3", "Invest & Grow", "Invest in assets, scale operations, and create compounding business freedom."],
+  [Gem, "Step 4", "Legacy & Impact", "Build EchoAlpha, expand the ecosystem, and turn imagination into durable infrastructure."],
 ];
 
 const navItems = [
   ["Home", "#home"],
+  ["Proof", "#proof"],
   ["Services", "#services"],
   ["Roadmap", "#roadmap"],
   ["About", "#about"],
@@ -105,14 +112,17 @@ function App() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(37,99,235,.25),transparent_36%),radial-gradient(circle_at_45%_20%,rgba(147,51,234,.22),transparent_30%)]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-[0.9fr_1.1fr] md:py-24">
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
-            <h1 className="max-w-2xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
-              Building AI Systems. Automating Growth. <span className="bg-gradient-to-r from-violet-400 to-sky-400 bg-clip-text text-transparent">Creating Freedom.</span>
+            <p className="mb-5 inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.18em] text-sky-200">
+              AI automation for support, content, leads, and operations
+            </p>
+            <h1 className="max-w-3xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
+              Turn manual business work into <span className="bg-gradient-to-r from-violet-400 to-sky-400 bg-clip-text text-transparent">systems that save time and prove ROI.</span>
             </h1>
-            <p className="mt-7 max-w-xl text-xl leading-8 text-slate-300">
-              EchoMedia.ai builds smart AI automations that save time, scale businesses, and create real freedom. Three divisions. One mission: Own the future.
+            <p className="mt-7 max-w-2xl text-xl leading-8 text-slate-300">
+              EchoMedia.ai builds practical AI automations for service teams, founders, creators, and hospitality operators. We connect tickets, logs, content, CRM follow-up, and customer communications into workflows that produce clear outcomes.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button href="#services">Explore Our Services</Button>
+              <Button href="#proof">View OpsHelm Demo</Button>
               <Button href="#contact" variant="outline">Book a Strategy Call</Button>
             </div>
           </motion.div>
@@ -124,23 +134,53 @@ function App() {
             </div>
             <div className="absolute right-[8%] top-12 hidden max-w-52 md:block">
               <p className="font-bold">AI AUTOMATION</p>
-              <p className="text-sm text-slate-300">Systems that work 24/7 so you don’t have to.</p>
+              <p className="text-sm text-slate-300">Systems that convert raw work into repeatable outcomes.</p>
             </div>
             <div className="absolute bottom-[21%] left-[8%] hidden max-w-48 md:block">
-              <p className="font-bold">FREEDOM</p>
-              <p className="text-sm text-slate-300">Time. Location. Life on your terms.</p>
+              <p className="font-bold">OPERATIONAL LEVERAGE</p>
+              <p className="text-sm text-slate-300">Support, content, leads, and reporting under one rhythm.</p>
             </div>
             <div className="absolute bottom-[15%] right-[8%] hidden max-w-48 md:block">
-              <p className="font-bold">SCALABLE GROWTH</p>
-              <p className="text-sm text-slate-300">Smart systems. Real results.</p>
+              <p className="font-bold">MEASURABLE ROI</p>
+              <p className="text-sm text-slate-300">Hours saved. Value shown. Next steps clear.</p>
             </div>
           </motion.div>
         </div>
       </section>
 
+      <section id="proof" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16">
+        <div className="rounded-3xl border border-white/10 bg-slate-900/70 p-8 shadow-2xl shadow-black/30">
+          <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-sky-300">Flagship Proof</p>
+              <h2 className="mt-3 text-4xl font-black">OpsHelm shows the engine behind the brand.</h2>
+              <p className="mt-5 leading-8 text-slate-300">
+                Our first visible proof point is AI ticket and log analysis: turn messy support evidence into root-cause summaries, escalation paths, customer-ready updates, and value estimates.
+              </p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Button href="#contact">Request a Demo</Button>
+                <Button href="#services" variant="outline">See Service Lines</Button>
+              </div>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {proofPoints.map(([title, copy]) => (
+                <article key={title} className="rounded-2xl border border-white/10 bg-black/25 p-5">
+                  <CheckCircle2 className="mb-4 h-6 w-6 text-sky-300" />
+                  <h3 className="font-black">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">{copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-20">
         <p className="text-center text-sm font-bold uppercase tracking-[0.25em] text-violet-300">Our Ecosystem</p>
-        <h2 className="mt-3 text-center text-4xl font-black">Three Divisions. Infinite Potential.</h2>
+        <h2 className="mt-3 text-center text-4xl font-black">Three Divisions. One Automation Backbone.</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-center leading-7 text-slate-300">
+          EchoMedia.ai starts with practical AI automation, then expands that operating leverage into hospitality and future intelligence products.
+        </p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {divisions.map((division) => {
             const Icon = division.icon;
@@ -171,7 +211,7 @@ function App() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-violet-300">Our Roadmap</p>
             <h2 className="mt-3 text-4xl font-black">The Journey Ahead</h2>
-            <p className="mt-5 leading-7 text-slate-300">We’re building step by step. Each phase unlocks more freedom, more impact, and more legacy.</p>
+            <p className="mt-5 leading-7 text-slate-300">We’re building step by step. Each phase turns automation into more leverage, more operating freedom, and more long-term impact.</p>
             <div className="mt-8"><Button href="#contact" variant="outline">Talk Through the Roadmap</Button></div>
           </div>
           <div className="grid gap-6 md:grid-cols-4">
@@ -220,8 +260,8 @@ function App() {
 
       <section id="contact" className="bg-gradient-to-r from-violet-600 to-sky-500">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center">
-          <div><h2 className="text-4xl font-black">Ready to Build Your Freedom?</h2><p className="mt-2 text-lg">Let’s connect and build something extraordinary together.</p></div>
-          <div className="text-center"><Button href="mailto:hello@echomedia.ai" variant="outline">Book a Call <ArrowRight className="ml-2 h-4 w-4" /></Button><p className="mt-3 text-sm">Let’s build your future.</p></div>
+          <div><h2 className="text-4xl font-black">Ready to Build Your Automation Engine?</h2><p className="mt-2 text-lg">Bring the messy workflow. We’ll map the system, prove the value, and help you ship the first useful automation.</p></div>
+          <div className="text-center"><Button href="mailto:hello@echomedia.ai?subject=EchoMedia.ai%20Strategy%20Call" variant="outline">Book a Call <ArrowRight className="ml-2 h-4 w-4" /></Button><p className="mt-3 text-sm">Ask about OpsHelm, automation, or the next build sprint.</p></div>
         </div>
       </section>
 
