@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import OpsHelmInteractiveDemo from "./components/OpsHelmInteractiveDemo";
 import OpsHelmProof from "./components/OpsHelmProof";
+import OpsHelmRequest from "./components/OpsHelmRequest";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import VanessaVision from "./components/VanessaVision";
@@ -17,6 +18,7 @@ export default function App() {
         <Hero />
         <OpsHelmProof />
         <OpsHelmInteractiveDemo />
+        <OpsHelmRequest />
         <Services />
         <Ecosystem />
         <Roadmap />
